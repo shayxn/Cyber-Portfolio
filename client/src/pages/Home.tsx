@@ -2,6 +2,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Section } from "@/components/ui/Section";
 import { GlitchText } from "@/components/ui/GlitchText";
 import { ProjectCard } from "@/components/ui/ProjectCard";
+import { InteractiveTerminal } from "@/components/ui/InteractiveTerminal";
 import { motion } from "framer-motion";
 import { Terminal, Award, BookOpen, ChevronRight, ShieldCheck } from "lucide-react";
 import heroBg from "@assets/generated_images/cybersecurity_abstract_background.png";
@@ -27,8 +28,8 @@ export function Home() {
 
       <main className="relative z-10 pt-16">
         {/* HERO SECTION */}
-        <section className="min-h-[90vh] flex items-center relative">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid md:grid-cols-2 gap-12 items-center">
+        <section className="min-h-[90vh] flex flex-col justify-center relative py-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid md:grid-cols-2 gap-12 items-center mb-16">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -71,10 +72,10 @@ export function Home() {
                 <div className="font-mono text-sm space-y-2">
                   <p className="text-green-500">$ ./whoami</p>
                   <p className="text-foreground pl-4">
-                    Name: [Your Name]<br/>
-                    Role: Cybersecurity Student<br/>
-                    Location: Unknown<br/>
-                    Focus: Red Teaming, Network Security
+                    Name: Syed Shayan Ali<br/>
+                    Role: Cybersecurity Analyst<br/>
+                    Location: United Arab Emirates<br/>
+                    Focus: Red Teaming, SOC Operations
                   </p>
                   <p className="text-green-500 mt-4">$ ./list_skills</p>
                   <div className="pl-4 grid grid-cols-2 gap-x-4 text-foreground/80">
@@ -86,6 +87,21 @@ export function Home() {
                   <p className="text-green-500 mt-4 animate-pulse">$ _</p>
                 </div>
               </div>
+            </motion.div>
+          </div>
+          
+          {/* Interactive Terminal Section */}
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8, duration: 0.6 }}
+            >
+              <div className="flex items-center gap-2 mb-2 text-primary font-mono text-sm">
+                <span className="animate-pulse">▶</span>
+                <span>INTERACTIVE_SYSTEM_ACCESS // TYPE 'help' FOR INSTRUCTIONS</span>
+              </div>
+              <InteractiveTerminal />
             </motion.div>
           </div>
         </section>
@@ -155,8 +171,8 @@ export function Home() {
             {[
               {
                 degree: "B.S. Cybersecurity",
-                school: "University of Technology",
-                period: "2022 - Present",
+                school: "Rochester Institute of Technology",
+                period: "2022 - 2026",
                 details: "Focus on Network Defense, Cryptography, and Digital Forensics. Dean's List 2023-2024."
               },
               {
