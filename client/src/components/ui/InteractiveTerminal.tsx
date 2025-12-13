@@ -50,7 +50,7 @@ export function InteractiveTerminal() {
         setInput("");
         return;
       case "whoami":
-        output = "Cybersecurity student passionate about red teaming, network defense, and secure systems architecture.";
+        output = "Hopefully an employer looking to hire.";
         break;
       case "projects":
         output = (
