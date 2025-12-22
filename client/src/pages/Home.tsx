@@ -174,12 +174,6 @@ export function Home() {
                 school: "Rochester Institute of Technology",
                 period: "2022 - 2026",
                 details: "Focus on Network Defense, Cryptography, and Digital Forensics. Dean's List 2023-2024."
-              },
-              {
-                degree: "High School Diploma",
-                school: "Tech High School",
-                period: "2018 - 2022",
-                details: "Computer Science Club President. Competed in regional CTF events."
               }
             ].map((edu, idx) => (
               <div key={idx} className="relative pl-8 md:pl-12">
