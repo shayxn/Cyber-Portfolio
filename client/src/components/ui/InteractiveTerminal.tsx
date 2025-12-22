@@ -17,7 +17,10 @@ export function InteractiveTerminal() {
 
   useEffect(() => {
     if (bottomRef.current) {
-      bottomRef.current.scrollIntoView({ behavior: 'smooth' });
+      const terminalContainer = bottomRef.current.closest('.terminal-container') as HTMLElement;
+      if (terminalContainer) {
+        terminalContainer.scrollTop = terminalContainer.scrollHeight;
+      }
     }
   }, [history]);
 
@@ -169,7 +172,7 @@ export function InteractiveTerminal() {
 
       {/* Terminal Content */}
       <div 
-        className="p-4 h-[400px] overflow-y-auto custom-scrollbar cursor-text"
+        className="p-4 h-[400px] overflow-y-auto custom-scrollbar cursor-text terminal-container"
         onClick={focusInput}
       >
         <div className="space-y-2 text-foreground/90">
