@@ -112,12 +112,19 @@ export function Home() {
             {[
               { name: "CompTIA Security+", issuer: "CompTIA", date: "2024", id: "SEC+" },
               { name: "Certified Ethical Hacker", issuer: "EC-Council", date: "In Progress", id: "CEH" },
-              { name: "Google Cybersecurity", issuer: "Google", date: "2023", id: "GCS" }
+              { 
+                name: "Google Cybersecurity", 
+                issuer: "Google", 
+                date: "2025", 
+                id: "GCS",
+                link: "https://www.coursera.org/account/accomplishments/specialization/LJ647PD19HXS"
+              }
             ].map((cert, idx) => (
               <motion.div 
                 key={idx}
                 whileHover={{ y: -5 }}
-                className="bg-card border-l-4 border-primary p-6 relative overflow-hidden group"
+                className="bg-card border-l-4 border-primary p-6 relative overflow-hidden group cursor-pointer"
+                onClick={() => cert.link && window.open(cert.link, '_blank')}
               >
                 <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                   <ShieldCheck className="w-24 h-24" />
