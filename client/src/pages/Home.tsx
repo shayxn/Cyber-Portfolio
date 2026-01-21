@@ -110,7 +110,7 @@ export function Home() {
         <Section title="CERTIFICATIONS" className="bg-secondary/20">
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { name: "ISO/IEC 27001:2022 Lead Auditor", issuer: "Mastermind Assurance", date: "2025", id: "ISO-LA" },
+              { name: "ISO/IEC 27001:2022 Lead Auditor", issuer: "Mastermind Assurance", date: "2025", id: "330d0e5f-76c5-4495-ab2d-5224e8bf95b5" },
               { name: "Certified Ethical Hacker", issuer: "EC-Council", date: "In Progress", id: "CEH" },
               { 
                 name: "Google Cybersecurity", 
