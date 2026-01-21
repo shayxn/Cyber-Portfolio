@@ -92,7 +92,7 @@ export function InteractiveTerminal() {
           <div className="space-y-1">
             <div>GitHub: <a href="https://github.com/shayxn" target="_blank" className="underline hover:text-accent">github.com/shayxn</a></div>
             <div>LinkedIn: <a href="https://www.linkedin.com/in/shayan89/" target="_blank" className="underline hover:text-accent">linkedin.com/in/shayan89</a></div>
-            <div>Email: <a href="mailto:contact@example.com" className="underline hover:text-accent">contact@example.com</a></div>
+            <div>Email: <a href="mailto:syedshayan03@protonmail.com" className="underline hover:text-accent">syedshayan03@protonmail.com</a></div>
           </div>
         );
         break;
