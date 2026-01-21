@@ -11,7 +11,7 @@ export function Navbar() {
     { href: "/", label: "HOME" },
     { href: "/skills", label: "SKILLS" },
     { href: "#projects", label: "PROJECTS" },
-    { href: "https://github.com/shayxn", label: "GITHUB" },
+    { href: "https://github.com/shayxn", label: "GITHUB", external: true },
   ];
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -34,15 +34,27 @@ export function Navbar() {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               {links.map((link) => (
-                <Link key={link.label} href={link.href}>
-                  <span 
-                    className={`cursor-pointer px-3 py-2 text-sm font-mono font-medium transition-colors hover:text-primary hover:bg-primary/10 border border-transparent hover:border-primary/50 ${
-                      location === link.href ? "text-primary border-b-primary" : "text-muted-foreground"
-                    }`}
+                link.external ? (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cursor-pointer px-3 py-2 text-sm font-mono font-medium transition-colors hover:text-primary hover:bg-primary/10 border border-transparent hover:border-primary/50 text-muted-foreground"
                   >
                     {`> ${link.label}`}
-                  </span>
-                </Link>
+                  </a>
+                ) : (
+                  <Link key={link.label} href={link.href}>
+                    <span 
+                      className={`cursor-pointer px-3 py-2 text-sm font-mono font-medium transition-colors hover:text-primary hover:bg-primary/10 border border-transparent hover:border-primary/50 ${
+                        location === link.href ? "text-primary border-b-primary" : "text-muted-foreground"
+                      }`}
+                    >
+                      {`> ${link.label}`}
+                    </span>
+                  </Link>
+                )
               ))}
               <a 
                 href="/resume.pdf" 
@@ -76,14 +88,27 @@ export function Navbar() {
           >
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {links.map((link) => (
-                <Link key={link.label} href={link.href}>
-                  <span 
+                link.external ? (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     onClick={() => setIsOpen(false)}
                     className="block px-3 py-2 text-base font-mono font-medium text-foreground hover:text-primary hover:bg-primary/10 border-l-2 border-transparent hover:border-primary cursor-pointer"
                   >
                     {`> ${link.label}`}
-                  </span>
-                </Link>
+                  </a>
+                ) : (
+                  <Link key={link.label} href={link.href}>
+                    <span 
+                      onClick={() => setIsOpen(false)}
+                      className="block px-3 py-2 text-base font-mono font-medium text-foreground hover:text-primary hover:bg-primary/10 border-l-2 border-transparent hover:border-primary cursor-pointer"
+                    >
+                      {`> ${link.label}`}
+                    </span>
+                  </Link>
+                )
               ))}
               <a 
                 href="/resume.pdf"
