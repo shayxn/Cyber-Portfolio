@@ -4,7 +4,7 @@ import { GlitchText } from "@/components/ui/GlitchText";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 import { InteractiveTerminal } from "@/components/ui/InteractiveTerminal";
 import { motion } from "framer-motion";
-import { Terminal, Award, BookOpen, ChevronRight, ShieldCheck, ExternalLink } from "lucide-react";
+import { Terminal, Award, BookOpen, ChevronRight, ShieldCheck } from "lucide-react";
 import heroBg from "@assets/generated_images/cybersecurity_abstract_background.png";
 
 export function Home() {
@@ -123,27 +123,15 @@ export function Home() {
               <motion.div 
                 key={idx}
                 whileHover={{ y: -5 }}
-                className="bg-card border-l-4 border-primary p-6 relative overflow-hidden group"
+                className="bg-card border-l-4 border-primary p-6 relative overflow-hidden group cursor-pointer"
+                onClick={() => cert.link && window.open(cert.link, '_blank')}
               >
                 <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                   <ShieldCheck className="w-24 h-24" />
                 </div>
                 <div className="flex justify-between items-start mb-4">
                   <Award className="w-8 h-8 text-primary" />
-                  <div className="flex items-center gap-2">
-                    {cert.link && (
-                      <a 
-                        href={cert.link} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-primary hover:text-accent transition-colors"
-                        title="View Certification"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                      </a>
-                    )}
-                    <span className="font-mono text-xs text-muted-foreground border border-primary/20 px-2 py-1">{cert.date}</span>
-                  </div>
+                  <span className="font-mono text-xs text-muted-foreground border border-primary/20 px-2 py-1">{cert.date}</span>
                 </div>
                 <h3 className="text-xl font-bold font-display text-foreground mb-1">{cert.name}</h3>
                 <p className="text-sm text-muted-foreground font-mono">{cert.issuer}</p>
