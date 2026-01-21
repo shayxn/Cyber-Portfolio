@@ -10,8 +10,8 @@ export function Navbar() {
   const links = [
     { href: "/", label: "HOME" },
     { href: "/skills", label: "SKILLS" },
-    { href: "#projects", label: "PROJECTS" }, // Anchor link for now or page
-    { href: "#education", label: "EDUCATION" },
+    { href: "#projects", label: "PROJECTS" },
+    { href: "https://github.com/shayxn", label: "GITHUB" },
   ];
 
   const toggleMenu = () => setIsOpen(!isOpen);

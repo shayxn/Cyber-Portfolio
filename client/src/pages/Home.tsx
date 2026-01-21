@@ -159,7 +159,7 @@ export function Home() {
             />
           </div>
           <div className="mt-12 text-center">
-            <a href="https://github.com" target="_blank" className="inline-flex items-center gap-2 text-primary hover:text-accent font-mono transition-colors">
+            <a href="https://github.com/shayxn" target="_blank" className="inline-flex items-center gap-2 text-primary hover:text-accent font-mono transition-colors">
               VIEW_ALL_REPOSITORIES <ChevronRight className="w-4 h-4" />
             </a>
           </div>
