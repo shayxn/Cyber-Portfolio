@@ -116,7 +116,7 @@ export function Home() {
                 name: "Google Cybersecurity", 
                 issuer: "Google", 
                 date: "2025", 
-                id: "GCS",
+                id: "LJ647PD19HXS",
                 link: "https://www.coursera.org/account/accomplishments/specialization/LJ647PD19HXS"
               }
             ].map((cert, idx) => (
