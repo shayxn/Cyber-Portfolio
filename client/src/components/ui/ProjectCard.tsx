@@ -67,7 +67,7 @@ export function ProjectCard({ title, description, tags, link, github, image }: P
               target="_blank" 
               className="text-muted-foreground hover:text-accent transition-colors flex items-center gap-2 text-sm font-mono"
             >
-              <ExternalLink className="w-4 h-4" /> DEMO
+              <ExternalLink className="w-4 h-4" /> LINK
             </a>
           )}
         </CardFooter>
