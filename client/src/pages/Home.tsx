@@ -7,6 +7,8 @@ import { motion } from "framer-motion";
 import { Terminal, Award, BookOpen, ChevronRight, ShieldCheck } from "lucide-react";
 import heroBg from "@assets/generated_images/cybersecurity_abstract_background.png";
 
+import expresswayLogo from "@assets/image_1770021462490.png";
+
 export function Home() {
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
@@ -147,22 +149,23 @@ export function Home() {
         <Section id="projects" title="PROJECTS_&_LABS">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ProjectCard 
+              title="HackTheBox: Expressway"
+              description="Successfully pwned the Expressway machine. Exploited vulnerabilities to gain system access and capture both user and root flags."
+              tags={["HackTheBox", "PenTesting", "Pwned"]}
+              image={expresswayLogo}
+              link="https://labs.hackthebox.com/achievement/machine/2289951/736"
+            />
+            <ProjectCard 
               title="Network Intrusion System"
               description="Built a custom IDS using Python and Snort rules to detect malicious traffic patterns in a simulated enterprise network."
               tags={["Python", "Snort", "Networking"]}
-              github="#"
+              github="https://github.com/shayxn"
             />
             <ProjectCard 
               title="Vulnerability Scanner"
               description="Automated scanning tool that checks for common CVEs and misconfigurations in web servers."
               tags={["Bash", "Linux", "Security"]}
-              github="#"
-            />
-            <ProjectCard 
-              title="Secure Chat App"
-              description="End-to-end encrypted messaging application implementing Signal Protocol for privacy."
-              tags={["React", "Node.js", "Cryptography"]}
-              link="#"
+              github="https://github.com/shayxn"
             />
           </div>
           <div className="mt-12 text-center">

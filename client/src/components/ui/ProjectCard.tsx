@@ -9,14 +9,25 @@ interface ProjectCardProps {
   tags: string[];
   link?: string;
   github?: string;
+  image?: string;
 }
 
-export function ProjectCard({ title, description, tags, link, github }: ProjectCardProps) {
+export function ProjectCard({ title, description, tags, link, github, image }: ProjectCardProps) {
   return (
     <motion.div
       whileHover={{ scale: 1.02 }}
-      className="cyber-border bg-card/50 backdrop-blur-sm h-full flex flex-col"
+      className="cyber-border bg-card/50 backdrop-blur-sm h-full flex flex-col overflow-hidden"
     >
+      {image && (
+        <div className="h-48 overflow-hidden border-b border-primary/20 relative group">
+          <img 
+            src={image} 
+            alt={title} 
+            className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+          />
+          <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors" />
+        </div>
+      )}
       <Card className="border-0 bg-transparent shadow-none h-full flex flex-col">
         <CardHeader>
           <div className="flex justify-between items-start">
