@@ -1,0 +1,96 @@
+{
+  "colorScheme": "dark",
+  "fonts": [
+    {
+      "family": "Neue Haas Unica",
+      "role": "body"
+    },
+    {
+      "family": "Consolas",
+      "role": "monospace"
+    },
+    {
+      "family": "Zeitung Mono",
+      "role": "unknown"
+    }
+  ],
+  "colors": {
+    "primary": "#1A2332",
+    "accent": "#141D2B",
+    "background": "#141D2B",
+    "textPrimary": "#141D2B",
+    "link": "#141D2B"
+  },
+  "typography": {
+    "fontFamilies": {
+      "primary": "Neue Haas Unica",
+      "heading": "Neue Haas Unica"
+    },
+    "fontStacks": {
+      "heading": [
+        "neue-haas-unica",
+        "Consolas"
+      ],
+      "body": [
+        "neue-haas-unica",
+        "Consolas"
+      ],
+      "paragraph": [
+        "neue-haas-unica",
+        "Consolas"
+      ]
+    },
+    "fontSizes": {
+      "h1": "16px",
+      "h2": "24px",
+      "body": "14.4px"
+    }
+  },
+  "spacing": {
+    "baseUnit": 10,
+    "borderRadius": "0px"
+  },
+  "components": {},
+  "images": {
+    "logo": "https://labs.hackthebox.com/images/logo-htb.svg",
+    "favicon": null,
+    "ogImage": "https://labs.hackthebox.com/achievement/machine/preview/2289951/660.png"
+  },
+  "__framework_hints": [],
+  "__llm_logo_reasoning": {
+    "selectedIndex": 1,
+    "reasoning": "Selected #1 because it is visible, has a large size, and the source URL suggests it is the main logo for Hack The Box.",
+    "confidence": 0.9,
+    "source": "llm"
+  },
+  "personality": {
+    "tone": "professional",
+    "energy": "medium",
+    "targetAudience": "cybersecurity professionals and enthusiasts"
+  },
+  "designSystem": {
+    "framework": "custom",
+    "componentLibrary": ""
+  },
+  "confidence": {
+    "buttons": 0,
+    "colors": 0.9,
+    "overall": 0.45
+  },
+  "__llm_metadata": {
+    "logoSelection": {
+      "llmCalled": true,
+      "llmSucceeded": true,
+      "finalSource": "llm",
+      "rawLogoSelection": {
+        "selectedLogoIndex": 1,
+        "selectedLogoReasoning": "Selected #1 because it is visible, has a large size, and the source URL suggests it is the main logo for Hack The Box.",
+        "confidence": 0.9
+      }
+    },
+    "buttonClassification": {
+      "llmCalled": false,
+      "llmSucceeded": false
+    }
+  }
+}

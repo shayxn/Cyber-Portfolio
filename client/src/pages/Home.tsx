@@ -8,6 +8,7 @@ import { Terminal, Award, BookOpen, ChevronRight, ShieldCheck } from "lucide-rea
 import heroBg from "@assets/generated_images/cybersecurity_abstract_background.png";
 
 import expresswayLogo from "@assets/image_1770021462490.png";
+import planningLogo from "@assets/image_1770023250391.png";
 
 export function Home() {
   return (
@@ -154,6 +155,13 @@ export function Home() {
               tags={["HackTheBox", "PenTesting", "Pwned"]}
               image={expresswayLogo}
               link="https://labs.hackthebox.com/achievement/machine/2289951/736"
+            />
+            <ProjectCard 
+              title="HackTheBox: Planning"
+              description="Successfully pwned the Planning machine. A retired machine that required strategic exploitation and lateral movement."
+              tags={["HackTheBox", "Retired", "Pwned"]}
+              image={planningLogo}
+              link="https://labs.hackthebox.com/achievement/machine/2289951/660"
             />
             <ProjectCard 
               title="Network Intrusion System"
