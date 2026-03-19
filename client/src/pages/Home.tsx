@@ -55,7 +55,7 @@ export function Home() {
                 <a href="#projects" className="px-8 py-3 bg-primary text-background font-mono font-bold hover:bg-white transition-colors clip-path-polygon" style={{ clipPath: "polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%)" }}>
                   VIEW_OPERATIONS
                 </a>
-                <a href="#contact" className="px-8 py-3 border border-primary text-primary font-mono font-bold hover:bg-primary/10 transition-colors clip-path-polygon" style={{ clipPath: "polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%)" }}>
+                <a href="mailto:shayanaliwis@gmail.com" className="px-8 py-3 border border-primary text-primary font-mono font-bold hover:bg-primary/10 transition-colors clip-path-polygon" style={{ clipPath: "polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%)" }}>
                   INITIATE_CONTACT
                 </a>
               </div>
