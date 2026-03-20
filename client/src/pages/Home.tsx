@@ -44,7 +44,7 @@ export function Home() {
               <div className="inline-block px-3 py-1 mb-4 border border-primary/50 bg-primary/10 text-primary font-mono text-sm rounded-sm">
                 STATUS: ONLINE
               </div>
-              <div className="bg-card/80 border border-primary/20 p-6 rounded-lg backdrop-blur-md shadow-[0_0_30px_rgba(34,197,94,0.1)] mb-8">
+              <div id="whoami-card" className="bg-card/80 border border-primary/20 p-6 rounded-lg backdrop-blur-md shadow-[0_0_30px_rgba(34,197,94,0.1)] mb-8">
                 <div className="flex items-center gap-2 mb-4 border-b border-primary/20 pb-2">
                   <Terminal className="text-primary w-5 h-5" />
                   <span className="text-sm font-mono text-muted-foreground">terminal@user:~</span>
