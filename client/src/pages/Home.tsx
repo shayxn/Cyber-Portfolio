@@ -3,10 +3,12 @@ import { Section } from "@/components/ui/Section";
 import { GlitchText } from "@/components/ui/GlitchText";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 import { InteractiveTerminal } from "@/components/ui/InteractiveTerminal";
+import { GlitchProfile } from "@/components/ui/GlitchProfile";
 import { motion } from "framer-motion";
 import { Terminal, Award, BookOpen, ChevronRight, ShieldCheck } from "lucide-react";
 import heroBg from "@assets/generated_images/cybersecurity_abstract_background.png";
 
+import profileImg from "@assets/image_1773977225773.png";
 import expresswayLogo from "@assets/image_1770021462490.png";
 import planningLogo from "@assets/image_1770023250391.png";
 
@@ -94,7 +96,7 @@ export function Home() {
           </div>
           
           {/* Interactive Terminal Section */}
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mb-24">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -105,6 +107,17 @@ export function Home() {
                 <span>INTERACTIVE_SYSTEM_ACCESS // TYPE 'help' FOR INSTRUCTIONS</span>
               </div>
               <InteractiveTerminal />
+            </motion.div>
+          </div>
+          
+          {/* Glitch Profile Section */}
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-12">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+            >
+              <GlitchProfile src={profileImg} />
             </motion.div>
           </div>
         </section>
