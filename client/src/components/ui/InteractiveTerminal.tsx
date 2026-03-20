@@ -53,7 +53,14 @@ export function InteractiveTerminal() {
         setInput("");
         return;
       case "whoami":
-        output = "Hopefully an employer looking to hire.";
+        output = (
+          <div className="space-y-1">
+            <div><span className="text-accent">Name</span>: Syed Shayan Ali</div>
+            <div><span className="text-accent">Role</span>: Cybersecurity Analyst</div>
+            <div><span className="text-accent">Location</span>: United Arab Emirates</div>
+            <div><span className="text-accent">Focus</span>: Red Teaming, SOC Operations</div>
+          </div>
+        );
         break;
       case "projects":
         output = (
