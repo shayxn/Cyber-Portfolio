@@ -103,6 +103,36 @@ export function Home() {
           </div>
         </section>
 
+        {/* EDUCATION */}
+        <Section id="education" title="EDUCATION_LOG" className="bg-secondary/10">
+          <div className="relative border-l border-primary/30 ml-4 md:ml-12 space-y-12">
+            {[
+              {
+                degree: "B.S. Cybersecurity",
+                school: "Rochester Institute of Technology",
+                period: "2022 - 2026",
+                details: "Focus on Network Defense, Cryptography, and Digital Forensics. Dean's List 2023-2024."
+              }
+            ].map((edu, idx) => (
+              <div key={idx} className="relative pl-8 md:pl-12">
+                <div className="absolute -left-[5px] top-2 w-2.5 h-2.5 bg-primary rounded-full shadow-[0_0_10px_theme('colors.primary')]"></div>
+                <div className="bg-card/50 p-6 border border-primary/10 hover:border-primary/40 transition-colors rounded-r-lg">
+                  <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                    <h3 className="text-xl font-display font-bold text-foreground">{edu.degree}</h3>
+                    <span className="font-mono text-sm text-primary bg-primary/10 px-3 py-1 rounded-full w-fit mt-2 md:mt-0">{edu.period}</span>
+                  </div>
+                  <h4 className="text-lg text-muted-foreground font-mono mb-4 flex items-center gap-2">
+                    <BookOpen className="w-4 h-4" /> {edu.school}
+                  </h4>
+                  <p className="text-foreground/80 font-sans leading-relaxed">
+                    {edu.details}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Section>
+
         {/* CERTIFICATIONS */}
         <Section title="CERTIFICATIONS" className="bg-secondary/20">
           <div className="grid md:grid-cols-3 gap-6">
@@ -136,37 +166,6 @@ export function Home() {
                   <span className="text-xs font-mono text-primary">ID: {cert.id}-{Math.floor(Math.random() * 9999)}</span>
                 </div>
               </motion.div>
-            ))}
-          </div>
-        </Section>
-
-
-        {/* EDUCATION */}
-        <Section id="education" title="EDUCATION_LOG" className="bg-secondary/10">
-          <div className="relative border-l border-primary/30 ml-4 md:ml-12 space-y-12">
-            {[
-              {
-                degree: "B.S. Cybersecurity",
-                school: "Rochester Institute of Technology",
-                period: "2022 - 2026",
-                details: "Focus on Network Defense, Cryptography, and Digital Forensics. Dean's List 2023-2024."
-              }
-            ].map((edu, idx) => (
-              <div key={idx} className="relative pl-8 md:pl-12">
-                <div className="absolute -left-[5px] top-2 w-2.5 h-2.5 bg-primary rounded-full shadow-[0_0_10px_theme('colors.primary')]"></div>
-                <div className="bg-card/50 p-6 border border-primary/10 hover:border-primary/40 transition-colors rounded-r-lg">
-                  <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                    <h3 className="text-xl font-display font-bold text-foreground">{edu.degree}</h3>
-                    <span className="font-mono text-sm text-primary bg-primary/10 px-3 py-1 rounded-full w-fit mt-2 md:mt-0">{edu.period}</span>
-                  </div>
-                  <h4 className="text-lg text-muted-foreground font-mono mb-4 flex items-center gap-2">
-                    <BookOpen className="w-4 h-4" /> {edu.school}
-                  </h4>
-                  <p className="text-foreground/80 font-sans leading-relaxed">
-                    {edu.details}
-                  </p>
-                </div>
-              </div>
             ))}
           </div>
         </Section>
