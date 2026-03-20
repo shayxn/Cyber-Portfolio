@@ -3,12 +3,14 @@ import { Section } from "@/components/ui/Section";
 import { GlitchText } from "@/components/ui/GlitchText";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 import { InteractiveTerminal } from "@/components/ui/InteractiveTerminal";
+import { CyberPortrait } from "@/components/ui/CyberPortrait";
 import { motion } from "framer-motion";
 import { Terminal, Award, BookOpen, ChevronRight, ShieldCheck } from "lucide-react";
 import heroBg from "@assets/generated_images/cybersecurity_abstract_background.png";
 
 import expresswayLogo from "@assets/image_1770021462490.png";
 import planningLogo from "@assets/image_1770023250391.png";
+import profilePic from "@assets/image_1773977700491.png";
 
 export function Home() {
   return (
@@ -67,29 +69,7 @@ export function Home() {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="hidden md:block"
             >
-              <div className="bg-card/80 border border-primary/20 p-6 rounded-lg backdrop-blur-md shadow-[0_0_30px_rgba(34,197,94,0.1)]">
-                <div className="flex items-center gap-2 mb-4 border-b border-primary/20 pb-2">
-                  <Terminal className="text-primary w-5 h-5" />
-                  <span className="text-sm font-mono text-muted-foreground">terminal@user:~</span>
-                </div>
-                <div className="font-mono text-sm space-y-2">
-                  <p className="text-green-500">$ ./whoami</p>
-                  <p className="text-foreground pl-4">
-                    Name: Syed Shayan Ali<br/>
-                    Role: Cybersecurity Analyst<br/>
-                    Location: United Arab Emirates<br/>
-                    Focus: Red Teaming, SOC Operations
-                  </p>
-                  <p className="text-green-500 mt-4">$ ./list_skills</p>
-                  <div className="pl-4 grid grid-cols-2 gap-x-4 text-foreground/80">
-                    <span>- Python</span>
-                    <span>- Linux</span>
-                    <span>- Wireshark</span>
-                    <span>- Metasploit</span>
-                  </div>
-                  <p className="text-green-500 mt-4 animate-pulse">$ _</p>
-                </div>
-              </div>
+              <CyberPortrait src={profilePic} />
             </motion.div>
           </div>
           
