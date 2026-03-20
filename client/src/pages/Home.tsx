@@ -40,18 +40,29 @@ export function Home() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="inline-block px-3 py-1 mb-4 border border-primary/50 bg-primary/10 text-primary font-mono text-sm rounded-sm">
-                STATUS: ONLINE
+              <div className="bg-card/80 border border-primary/20 p-6 rounded-lg backdrop-blur-md shadow-[0_0_30px_rgba(34,197,94,0.1)] mb-8">
+                <div className="flex items-center gap-2 mb-4 border-b border-primary/20 pb-2">
+                  <Terminal className="text-primary w-5 h-5" />
+                  <span className="text-sm font-mono text-muted-foreground">terminal@user:~</span>
+                </div>
+                <div className="font-mono text-sm space-y-2">
+                  <p className="text-green-500">$ ./whoami</p>
+                  <p className="text-foreground pl-4">
+                    Name: Syed Shayan Ali<br/>
+                    Role: Cybersecurity Analyst<br/>
+                    Location: United Arab Emirates<br/>
+                    Focus: Red Teaming, SOC Operations
+                  </p>
+                  <p className="text-green-500 mt-4">$ ./list_skills</p>
+                  <div className="pl-4 grid grid-cols-2 gap-x-4 text-foreground/80">
+                    <span>- Python</span>
+                    <span>- Linux</span>
+                    <span>- Wireshark</span>
+                    <span>- Metasploit</span>
+                  </div>
+                  <p className="text-green-500 mt-4 animate-pulse">$ _</p>
+                </div>
               </div>
-              <h1 className="text-5xl md:text-7xl font-display font-bold text-foreground mb-6 leading-tight">
-                <GlitchText text="SECURE" /> THE <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500">
-                  FUTURE
-                </span>
-              </h1>
-              <p className="text-xl text-muted-foreground font-sans max-w-lg mb-8 leading-relaxed border-l-2 border-primary/30 pl-6">
-                I am a Cybersecurity Student passionate about network defense, ethical hacking, and building secure systems.
-              </p>
               
               <div className="flex flex-wrap gap-4">
                 <a href="/projects" className="px-8 py-3 bg-primary text-background font-mono font-bold hover:bg-white transition-colors clip-path-polygon" style={{ clipPath: "polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%)" }}>
