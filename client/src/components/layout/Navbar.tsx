@@ -10,7 +10,7 @@ export function Navbar() {
   const links = [
     { href: "/", label: "HOME" },
     { href: "/skills", label: "SKILLS" },
-    { href: "#projects", label: "PROJECTS" },
+    { href: "/projects", label: "PROJECTS" },
     { href: "https://github.com/shayxn", label: "GITHUB", external: true },
   ];
 

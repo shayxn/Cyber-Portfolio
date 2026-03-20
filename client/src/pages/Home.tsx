@@ -52,7 +52,7 @@ export function Home() {
               </p>
               
               <div className="flex flex-wrap gap-4">
-                <a href="#projects" className="px-8 py-3 bg-primary text-background font-mono font-bold hover:bg-white transition-colors clip-path-polygon" style={{ clipPath: "polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%)" }}>
+                <a href="/projects" className="px-8 py-3 bg-primary text-background font-mono font-bold hover:bg-white transition-colors clip-path-polygon" style={{ clipPath: "polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%)" }}>
                   VIEW_OPERATIONS
                 </a>
                 <a href="mailto:shayanaliwis@gmail.com" className="px-8 py-3 border border-primary text-primary font-mono font-bold hover:bg-primary/10 transition-colors clip-path-polygon" style={{ clipPath: "polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%)" }}>
@@ -146,42 +146,6 @@ export function Home() {
           </div>
         </Section>
 
-        {/* PROJECTS */}
-        <Section id="projects" title="PROJECTS_&_LABS">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ProjectCard 
-              title="HackTheBox: Expressway"
-              description="Successfully pwned the Expressway machine. Exploited vulnerabilities to gain system access and capture both user and root flags."
-              tags={["HackTheBox", "PenTesting", "Pwned"]}
-              image={expresswayLogo}
-              link="https://labs.hackthebox.com/achievement/machine/2289951/736"
-            />
-            <ProjectCard 
-              title="HackTheBox: Planning"
-              description="Successfully pwned the Planning machine. A retired machine that required strategic exploitation and lateral movement."
-              tags={["HackTheBox", "Retired", "Pwned"]}
-              image={planningLogo}
-              link="https://labs.hackthebox.com/achievement/machine/2289951/660"
-            />
-            <ProjectCard 
-              title="Network Intrusion System"
-              description="Built a custom IDS using Python and Snort rules to detect malicious traffic patterns in a simulated enterprise network."
-              tags={["Python", "Snort", "Networking"]}
-              github="https://github.com/shayxn"
-            />
-            <ProjectCard 
-              title="Vulnerability Scanner"
-              description="Automated scanning tool that checks for common CVEs and misconfigurations in web servers."
-              tags={["Bash", "Linux", "Security"]}
-              github="https://github.com/shayxn"
-            />
-          </div>
-          <div className="mt-12 text-center">
-            <a href="https://github.com/shayxn" target="_blank" className="inline-flex items-center gap-2 text-primary hover:text-accent font-mono transition-colors">
-              VIEW_ALL_REPOSITORIES <ChevronRight className="w-4 h-4" />
-            </a>
-          </div>
-        </Section>
 
         {/* EDUCATION */}
         <Section id="education" title="EDUCATION_LOG" className="bg-secondary/10">
