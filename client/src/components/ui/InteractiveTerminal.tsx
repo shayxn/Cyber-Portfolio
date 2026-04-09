@@ -65,7 +65,7 @@ export function InteractiveTerminal() {
       case "projects":
         output = (
           <div className="space-y-2">
-            <div><span className="text-accent font-bold">Network Intrusion System</span> - Python, Snort, Networking</div>
+            <div><span className="text-accent font-bold">Malware Exploit Investigation</span> - Forensics, Kibana, Wireshark</div>
             <div><span className="text-accent font-bold">Vulnerability Scanner</span> - Bash, Linux Security</div>
             <div><span className="text-accent font-bold">Secure Chat App</span> - React, Node.js, Cryptography</div>
             <div className="text-muted-foreground mt-2">Type 'help' for more commands.</div>

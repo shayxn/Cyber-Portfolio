@@ -5,6 +5,7 @@ import { ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import expresswayLogo from "@assets/image_1770021462490.png";
 import planningLogo from "@assets/image_1770023250391.png";
+import malwareLogo from "@assets/image_1775729570009.png";
 
 export function Projects() {
   return (
@@ -35,10 +36,11 @@ export function Projects() {
               link="https://labs.hackthebox.com/achievement/machine/2289951/660"
             />
             <ProjectCard 
-              title="Network Intrusion System"
-              description="Built a custom IDS using Python and Snort rules to detect malicious traffic patterns in a simulated enterprise network."
-              tags={["Python", "Snort", "Networking"]}
-              github="https://github.com/shayxn"
+              title="Malware Exploit Investigation"
+              description="Network forensics case study using Kibana, Sguil, and Wireshark to trace a malware exploit and analyze attack artifacts."
+              tags={["Forensics", "Kibana", "Wireshark"]}
+              image={malwareLogo}
+              github="https://github.com/shayxn/malware-exploit-investigation"
             />
             <ProjectCard 
               title="Vulnerability Scanner"
