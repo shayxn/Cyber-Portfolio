@@ -50,14 +50,8 @@ export function Skills() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: idx * 0.2 }}
-                className="bg-card/30 border border-primary/10 p-8 rounded-lg relative"
+                className="bg-card/40 border border-primary/20 p-8 rounded-xl relative shadow-[0_4px_20px_rgba(0,0,0,0.3)] hover:border-primary/40 transition-colors"
               >
-                {/* Decorative corner markers */}
-                <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-primary"></div>
-                <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-primary"></div>
-                <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-primary"></div>
-                <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-primary"></div>
-
                 <h3 className="text-2xl font-display font-bold text-primary mb-8 tracking-widest border-b border-primary/20 pb-4 inline-block">
                   {category.title}
                 </h3>

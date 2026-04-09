@@ -16,7 +16,7 @@ export function ProjectCard({ title, description, tags, link, github, image }: P
   return (
     <motion.div
       whileHover={{ scale: 1.02 }}
-      className="cyber-border bg-card/50 backdrop-blur-sm h-full flex flex-col overflow-hidden"
+      className="border border-primary/20 rounded-xl bg-card/60 backdrop-blur-sm h-full flex flex-col overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.4)] hover:border-primary/50 transition-colors"
     >
       {image && (
         <div className="h-48 overflow-hidden border-b border-primary/20 relative group">

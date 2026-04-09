@@ -163,7 +163,7 @@ export function InteractiveTerminal() {
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto my-12 font-mono text-sm shadow-[0_0_50px_rgba(0,0,0,0.5)] rounded-lg overflow-hidden border border-primary/20 bg-black/90 backdrop-blur">
+    <div className="w-full max-w-4xl mx-auto my-12 font-mono text-sm shadow-[0_4px_30px_rgba(110,44,243,0.2)] rounded-xl overflow-hidden border border-primary/30 bg-card/80 backdrop-blur-md">
       {/* Terminal Title Bar */}
       <div className="bg-muted/50 px-4 py-2 flex items-center justify-between border-b border-primary/10 select-none">
         <div className="flex items-center gap-2 text-muted-foreground">

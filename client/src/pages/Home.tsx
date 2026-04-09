@@ -6,7 +6,6 @@ import { InteractiveTerminal } from "@/components/ui/InteractiveTerminal";
 import { CyberPortrait } from "@/components/ui/CyberPortrait";
 import { motion } from "framer-motion";
 import { Terminal, Award, BookOpen, ChevronRight, ShieldCheck } from "lucide-react";
-import heroBg from "@assets/generated_images/cybersecurity_abstract_background.png";
 import { Link } from "wouter";
 
 import expresswayLogo from "@assets/image_1770021462490.png";
@@ -16,17 +15,6 @@ import profilePic from "@assets/image_1773977700491.png";
 export function Home() {
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
-      {/* Background Image Overlay */}
-      <div 
-        className="fixed inset-0 z-0 opacity-20 pointer-events-none mix-blend-screen"
-        style={{ 
-          backgroundImage: `url(${heroBg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      />
-      
       {/* Scanline Effect */}
       <div className="scanline"></div>
 
@@ -50,31 +38,29 @@ export function Home() {
                   <span className="text-sm font-mono text-muted-foreground">terminal@user:~</span>
                 </div>
                 <div className="font-mono text-sm space-y-2">
-                  <p className="text-green-500">$ ./whoami</p>
+                  <p className="text-primary">$ ./whoami</p>
                   <p className="text-foreground pl-4">
                     Name: Syed Shayan Ali<br/>
                     Role: Cybersecurity Analyst<br/>
                     Location: United Arab Emirates<br/>
                     Focus: Red Teaming, SOC Operations
                   </p>
-                  <p className="text-green-500 mt-4">$ ./list_skills</p>
+                  <p className="text-primary mt-4">$ ./list_skills</p>
                   <div className="pl-4 grid grid-cols-2 gap-x-4 text-foreground/80">
                     <span>- Python</span>
                     <span>- Linux</span>
                     <span>- Wireshark</span>
                     <span>- Metasploit</span>
                   </div>
-                  <p className="text-green-500 mt-4 animate-pulse">$ _</p>
+                  <p className="text-primary mt-4 animate-pulse">$ _</p>
                 </div>
               </div>
               
               <div className="flex flex-wrap gap-4">
-                <Link href="/projects">
-                  <span className="cursor-pointer inline-block px-8 py-3 bg-primary text-background font-mono font-bold hover:bg-white transition-colors clip-path-polygon" style={{ clipPath: "polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%)" }}>
-                    VIEW_OPERATIONS
-                  </span>
+                <Link href="/projects" className="cursor-pointer inline-block px-8 py-3 bg-primary text-primary-foreground rounded-lg font-mono font-bold hover:bg-primary/90 transition-colors shadow-[0_0_15px_rgba(147,51,234,0.3)] hover:shadow-[0_0_25px_rgba(147,51,234,0.5)]">
+                  VIEW_OPERATIONS
                 </Link>
-                <a href="mailto:shayanaliwis@gmail.com" className="inline-block px-8 py-3 border border-primary text-primary font-mono font-bold hover:bg-primary/10 transition-colors clip-path-polygon" style={{ clipPath: "polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%)" }}>
+                <a href="mailto:shayanaliwis@gmail.com" className="inline-block px-8 py-3 border-2 border-primary text-primary rounded-lg font-mono font-bold hover:bg-primary/10 transition-colors">
                   INITIATE_CONTACT
                 </a>
               </div>
