@@ -70,7 +70,7 @@ export function Home() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="hidden md:block"
+              className="flex justify-center w-full max-w-sm mx-auto md:max-w-none mt-8 md:mt-0"
             >
               <CyberPortrait src={profilePic} />
             </motion.div>
