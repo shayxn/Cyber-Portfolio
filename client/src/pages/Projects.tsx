@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import expresswayLogo from "@assets/image_1770021462490.png";
 import planningLogo from "@assets/image_1770023250391.png";
 import malwareLogo from "@assets/image_1775729570009.png";
+import aiRiskLogo from "@assets/image_1776076981590.png";
 
 export function Projects() {
   return (
@@ -34,6 +35,13 @@ export function Projects() {
               tags={["HackTheBox", "Retired", "Pwned"]}
               image={planningLogo}
               link="https://labs.hackthebox.com/achievement/machine/2289951/660"
+            />
+            <ProjectCard 
+              title="AI Risk Assessment & Governance Review"
+              description="This project presents a structured AI risk assessment and governance review of an AI-assisted recruitment system used for candidate screening and shortlisting. The analysis identifies key risks associated with the system and provides practical recommendations to ensure responsible and compliant use of AI."
+              tags={["GRC", "AI Governance", "Risk Management"]}
+              image={aiRiskLogo}
+              github="https://github.com/shayxn/ai-risk-assessment-talentmatcha"
             />
             <ProjectCard 
               title="Malware Exploit Investigation"
