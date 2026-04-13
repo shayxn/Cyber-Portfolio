@@ -41,7 +41,7 @@ export function Projects() {
               description="This project presents a structured AI risk assessment and governance review of an AI-assisted recruitment system used for candidate screening and shortlisting. The analysis identifies key risks associated with the system and provides practical recommendations to ensure responsible and compliant use of AI."
               tags={["GRC", "AI Governance", "Risk Management"]}
               image={aiRiskLogo}
-              github="https://github.com/shayxn/ai-risk-assessment-talentmatcha"
+              github="https://github.com/shayxn/ai-risk-assessment-talentmatch"
             />
             <ProjectCard 
               title="Malware Exploit Investigation"
