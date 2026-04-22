@@ -42,7 +42,7 @@ export function Home() {
                   <p className="text-foreground pl-4">
                     Name: Syed Shayan Ali<br/>
                     Role: Cybersecurity Analyst<br/>
-                    Location: United Arab Emirates<br/>
+                    Location: United Arab Emirates 🇦🇪<br/>
                     Focus: Red Teaming, SOC Operations
                   </p>
                   <p className="text-primary mt-4">$ ./list_skills</p>
