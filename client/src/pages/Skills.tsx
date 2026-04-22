@@ -7,31 +7,28 @@ export function Skills() {
     {
       title: "OFFENSIVE_SECURITY",
       skills: [
-        { name: "Penetration Testing", level: 80 },
-        { name: "Metasploit Framework", level: 75 },
+        { name: "Vulnerability Assessment", level: 85 },
+        { name: "Metasploit", level: 80 },
         { name: "Burp Suite", level: 85 },
-        { name: "Social Engineering", level: 60 },
-        { name: "SQL Injection", level: 90 }
+        { name: "Nmap", level: 90 }
       ]
     },
     {
       title: "DEFENSIVE_SECURITY",
       skills: [
-        { name: "Network Monitoring", level: 85 },
-        { name: "Firewall Configuration", level: 80 },
-        { name: "Incident Response", level: 70 },
-        { name: "SIEM (Splunk)", level: 65 },
-        { name: "Malware Analysis", level: 50 }
+        { name: "Security Onion", level: 85 },
+        { name: "SIEM (Splunk)", level: 80 },
+        { name: "Wireshark", level: 90 },
+        { name: "Malware Analysis", level: 75 }
       ]
     },
     {
-      title: "PROGRAMMING_&_TOOLS",
+      title: "GRC_&_INFRASTRUCTURE",
       skills: [
-        { name: "Python", level: 90 },
-        { name: "Bash Scripting", level: 85 },
-        { name: "Linux Administration", level: 95 },
-        { name: "C/C++", level: 60 },
-        { name: "Git/GitHub", level: 85 }
+        { name: "GRC (Governance, Risk, Compliance)", level: 85 },
+        { name: "Active Directory", level: 80 },
+        { name: "ISO/IEC 27001", level: 90 },
+        { name: "Linux Security", level: 85 }
       ]
     }
   ];

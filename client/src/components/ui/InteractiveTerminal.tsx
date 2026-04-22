@@ -65,10 +65,10 @@ export function InteractiveTerminal() {
       case "projects":
         output = (
           <div className="space-y-2">
-            <div><span className="text-accent font-bold">AI Risk Assessment</span> - GRC, AI Governance, Risk Management</div>
-            <div><span className="text-accent font-bold">Malware Exploit Investigation</span> - Forensics, Kibana, Wireshark</div>
-            <div><span className="text-accent font-bold">Vulnerability Scanner</span> - Bash, Linux Security</div>
-            <div><span className="text-accent font-bold">Secure Chat App</span> - React, Node.js, Cryptography</div>
+            <div><span className="text-accent font-bold">Malware Exploit Investigation</span> - Kibana, Sguil, Wireshark</div>
+            <div><span className="text-accent font-bold">AI Risk Assessment (GRC)</span> - Governance, Risk, Compliance</div>
+            <div><span className="text-accent font-bold">Offensive Security Labs</span> - Hack The Box, PenTesting</div>
+            <div><span className="text-accent font-bold">Security Log Analysis</span> - Splunk SIEM, Microsoft Sentinel</div>
             <div className="text-muted-foreground mt-2">Type 'help' for more commands.</div>
           </div>
         );
@@ -79,17 +79,17 @@ export function InteractiveTerminal() {
             <div>
               <div className="text-accent mb-1">Offensive</div>
               <ul className="list-disc list-inside text-primary/80">
-                <li>Penetration Testing</li>
-                <li>Metasploit</li>
+                <li>Vulnerability Assessment</li>
+                <li>Metasploit & Nmap</li>
                 <li>Burp Suite</li>
               </ul>
             </div>
             <div>
-              <div className="text-accent mb-1">Defensive</div>
+              <div className="text-accent mb-1">Defensive & GRC</div>
               <ul className="list-disc list-inside text-primary/80">
-                <li>Network Monitoring</li>
-                <li>Firewall Config</li>
-                <li>Incident Response</li>
+                <li>Splunk & Sentinel SIEM</li>
+                <li>Security Onion & Wireshark</li>
+                <li>Active Directory & ISO 27001</li>
               </ul>
             </div>
           </div>

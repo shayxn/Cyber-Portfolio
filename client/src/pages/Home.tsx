@@ -92,8 +92,67 @@ export function Home() {
           </div>
         </section>
 
+        <Section id="experience" title="WORK_EXPERIENCE" className="bg-secondary/10">
+          <div className="relative border-l border-primary/30 ml-4 md:ml-12 space-y-12">
+            {[
+              {
+                role: "AI Cybersecurity Intern",
+                company: "ATS5E",
+                period: "12/2025 - 04/2026",
+                location: "Dubai, UAE",
+                details: "Supported security reviews for AI-enabled systems and agents, with focus on access control, risk identification, secure integrations, and technical security documentation."
+              },
+              {
+                role: "Cybersecurity & Risk Governance Intern",
+                company: "Aspiro",
+                period: "06/2025 - 09/2025",
+                location: "Dubai, UAE",
+                details: "Supported cybersecurity risk assessments, control reviews, and compliance-related governance activities."
+              },
+              {
+                role: "Cybersecurity Intern",
+                company: "InShield Tech",
+                period: "05/2025 - 06/2025",
+                location: "Dubai, UAE",
+                details: "Supported Netskope cloud security operations, including policy monitoring, alert review, and security documentation."
+              },
+              {
+                role: "AI Cybersecurity Intern",
+                company: "Raen AI",
+                period: "05/2024 - 08/2024",
+                location: "Dubai, UAE",
+                details: "Performed red teaming of Large Language Model (LLM) applications to uncover security risks, misuse scenarios, and prompt injection vulnerabilities. Used Giskard to automate vulnerability scanning, bias detection, and adversarial testing of AI models, improving the reliability and security of deployed systems."
+              },
+              {
+                role: "IT Intern",
+                company: "Lattafa",
+                period: "05/2023 - 08/2023",
+                location: "Sharjah, UAE",
+                details: "Collaborated with IT teams to support information security policies and controls."
+              }
+            ].map((exp, idx) => (
+              <div key={idx} className="relative pl-8 md:pl-12">
+                <div className="absolute -left-[5px] top-2 w-2.5 h-2.5 bg-primary rounded-full shadow-[0_0_10px_theme('colors.primary')]"></div>
+                <div className="bg-card/50 p-6 border border-primary/10 hover:border-primary/40 transition-colors rounded-r-lg">
+                  <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                    <h3 className="text-xl font-display font-bold text-foreground">{exp.role}</h3>
+                    <span className="font-mono text-sm text-primary bg-primary/10 px-3 py-1 rounded-full w-fit mt-2 md:mt-0">{exp.period}</span>
+                  </div>
+                  <h4 className="text-lg text-muted-foreground font-mono mb-4 flex items-center justify-between">
+                    <span className="flex items-center gap-2"><Terminal className="w-4 h-4" /> {exp.company}</span>
+                    <span className="text-sm">{exp.location}</span>
+                  </h4>
+                  <p className="text-foreground/80 font-sans leading-relaxed">
+                    {exp.details}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Section>
+
         {/* EDUCATION */}
-        <Section id="education" title="EDUCATION_LOG" className="bg-secondary/10">
+        <Section id="education" title="EDUCATION_LOG" className="bg-secondary/5">
           <div className="relative border-l border-primary/30 ml-4 md:ml-12 space-y-12">
             {[
               {
@@ -156,6 +215,37 @@ export function Home() {
                 </div>
               </motion.div>
             ))}
+          </div>
+        </Section>
+
+        {/* PROJECTS SECTION - NEW */}
+        <Section title="LATEST_OPERATIONS" className="bg-secondary/5">
+          <div className="grid md:grid-cols-2 gap-6">
+            <ProjectCard 
+              title="Malware Exploit Investigation"
+              description="Investigated a malware exploit using Kibana, Sguil, and Wireshark to analyze attack traffic and identify exploit behavior."
+              tags={["Kibana", "Sguil", "Wireshark", "Malware"]}
+            />
+            <ProjectCard 
+              title="AI Risk Assessment (GRC)"
+              description="Conducted a structured AI risk assessment and governance review of a recruitment system, identifying key risks and mitigation strategies."
+              tags={["GRC", "AI Governance", "Risk"]}
+            />
+            <ProjectCard 
+              title="Offensive Security Labs"
+              description="Performed penetration testing labs on Hack The Box, exploiting vulnerabilities and achieving privilege escalation."
+              tags={["Hack The Box", "PenTesting", "PrivEsc"]}
+            />
+            <ProjectCard 
+              title="Security Log Analysis"
+              description="Performed log analysis using Splunk and Microsoft Sentinel, identifying patterns and investigating network and security events."
+              tags={["Splunk", "Sentinel", "SIEM"]}
+            />
+          </div>
+          <div className="text-center mt-8">
+            <Link href="/projects" className="inline-flex items-center gap-2 text-primary hover:text-accent font-mono transition-colors">
+              VIEW_ALL_PROJECTS <ChevronRight className="w-4 h-4" />
+            </Link>
           </div>
         </Section>
 
