@@ -23,7 +23,11 @@ export function Navbar() {
           <div className="flex-shrink-0">
             <Link href="/">
               <div className="flex items-center gap-2 cursor-pointer group">
-                <Shield className="h-8 w-8 text-primary group-hover:text-accent transition-colors" />
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Kali-dragon-icon.svg" 
+                  alt="Dragon Logo" 
+                  className="h-8 w-8 object-contain filter drop-shadow-[0_0_8px_rgba(147,51,234,0.6)] opacity-90 group-hover:opacity-100 group-hover:drop-shadow-[0_0_12px_rgba(147,51,234,0.9)] transition-all duration-300"
+                />
                 <span className="font-display font-bold text-xl tracking-wider text-foreground group-hover:text-primary transition-colors">
                   SEC<span className="text-primary">.PORTFOLIO</span>
                 </span>
