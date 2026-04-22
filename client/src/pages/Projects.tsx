@@ -23,26 +23,38 @@ export function Projects() {
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             <ProjectCard 
-              title="Malware Exploit Investigation"
-              description="Investigated a malware exploit using Kibana, Sguil, and Wireshark to analyze attack traffic and identify exploit behavior."
-              tags={["Forensics", "Kibana", "Wireshark", "Sguil"]}
-              image={malwareLogo}
+              title="HackTheBox: Expressway"
+              description="Successfully pwned the Expressway machine. Exploited vulnerabilities to gain system access and capture both user and root flags."
+              tags={["HackTheBox", "PenTesting", "Pwned"]}
+              image={expresswayLogo}
+              link="https://labs.hackthebox.com/achievement/machine/2289951/736"
             />
             <ProjectCard 
-              title="AI Risk Assessment for Recruitment System (GRC)"
-              description="Conducted a structured AI risk assessment and governance review of a recruitment system, identifying key risks and mitigation strategies."
+              title="HackTheBox: Planning"
+              description="Successfully pwned the Planning machine. A retired machine that required strategic exploitation and lateral movement."
+              tags={["HackTheBox", "Retired", "Pwned"]}
+              image={planningLogo}
+              link="https://labs.hackthebox.com/achievement/machine/2289951/660"
+            />
+            <ProjectCard 
+              title="AI Risk Assessment & Governance Review"
+              description="This project presents a structured AI risk assessment and governance review of an AI-assisted recruitment system used for candidate screening and shortlisting. The analysis identifies key risks associated with the system and provides practical recommendations to ensure responsible and compliant use of AI."
               tags={["GRC", "AI Governance", "Risk Management"]}
               image={aiRiskLogo}
+              github="https://github.com/shayxn/ai-risk-assessment-talentmatch"
             />
             <ProjectCard 
-              title="Offensive Security Labs — Hack The Box"
-              description="Performed penetration testing labs on Hack The Box, exploiting vulnerabilities and achieving privilege escalation."
-              tags={["HackTheBox", "PenTesting", "PrivEsc", "OffSec"]}
+              title="Malware Exploit Investigation"
+              description="Network forensics case study using Kibana, Sguil, and Wireshark to trace a malware exploit and analyze attack artifacts."
+              tags={["Forensics", "Kibana", "Wireshark"]}
+              image={malwareLogo}
+              github="https://github.com/shayxn/malware-exploit-investigation"
             />
             <ProjectCard 
-              title="Security Log Analysis & Monitoring"
-              description="Performed log analysis using Splunk and Microsoft Sentinel, identifying patterns and investigating network and security events."
-              tags={["Splunk", "Microsoft Sentinel", "SIEM", "Log Analysis"]}
+              title="Vulnerability Scanner"
+              description="Automated scanning tool that checks for common CVEs and misconfigurations in web servers."
+              tags={["Bash", "Linux", "Security"]}
+              github="https://github.com/shayxn"
             />
           </motion.div>
           

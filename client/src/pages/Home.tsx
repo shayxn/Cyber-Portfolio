@@ -218,37 +218,6 @@ export function Home() {
           </div>
         </Section>
 
-        {/* PROJECTS SECTION - NEW */}
-        <Section title="LATEST_OPERATIONS" className="bg-secondary/5">
-          <div className="grid md:grid-cols-2 gap-6">
-            <ProjectCard 
-              title="Malware Exploit Investigation"
-              description="Investigated a malware exploit using Kibana, Sguil, and Wireshark to analyze attack traffic and identify exploit behavior."
-              tags={["Kibana", "Sguil", "Wireshark", "Malware"]}
-            />
-            <ProjectCard 
-              title="AI Risk Assessment (GRC)"
-              description="Conducted a structured AI risk assessment and governance review of a recruitment system, identifying key risks and mitigation strategies."
-              tags={["GRC", "AI Governance", "Risk"]}
-            />
-            <ProjectCard 
-              title="Offensive Security Labs"
-              description="Performed penetration testing labs on Hack The Box, exploiting vulnerabilities and achieving privilege escalation."
-              tags={["Hack The Box", "PenTesting", "PrivEsc"]}
-            />
-            <ProjectCard 
-              title="Security Log Analysis"
-              description="Performed log analysis using Splunk and Microsoft Sentinel, identifying patterns and investigating network and security events."
-              tags={["Splunk", "Sentinel", "SIEM"]}
-            />
-          </div>
-          <div className="text-center mt-8">
-            <Link href="/projects" className="inline-flex items-center gap-2 text-primary hover:text-accent font-mono transition-colors">
-              VIEW_ALL_PROJECTS <ChevronRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </Section>
-
         <footer className="border-t border-primary/20 bg-background py-12">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <p className="font-mono text-sm text-muted-foreground">
