@@ -50,12 +50,6 @@ export function Projects() {
               image={malwareLogo}
               github="https://github.com/shayxn/malware-exploit-investigation"
             />
-            <ProjectCard 
-              title="Vulnerability Scanner"
-              description="Automated scanning tool that checks for common CVEs and misconfigurations in web servers."
-              tags={["Bash", "Linux", "Security"]}
-              github="https://github.com/shayxn"
-            />
           </motion.div>
           
           <motion.div 

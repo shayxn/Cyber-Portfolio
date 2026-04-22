@@ -67,7 +67,6 @@ export function InteractiveTerminal() {
           <div className="space-y-2">
             <div><span className="text-accent font-bold">AI Risk Assessment</span> - GRC, AI Governance, Risk Management</div>
             <div><span className="text-accent font-bold">Malware Exploit Investigation</span> - Forensics, Kibana, Wireshark</div>
-            <div><span className="text-accent font-bold">Vulnerability Scanner</span> - Bash, Linux Security</div>
             <div><span className="text-accent font-bold">Secure Chat App</span> - React, Node.js, Cryptography</div>
             <div className="text-muted-foreground mt-2">Type 'help' for more commands.</div>
           </div>
