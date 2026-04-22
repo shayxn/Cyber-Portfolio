@@ -1,5 +1,5 @@
 import { Link, useLocation } from "wouter";
-import { Terminal, Shield, Menu, X } from "lucide-react";
+import { Hexagon, Cpu, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -23,12 +23,11 @@ export function Navbar() {
           <div className="flex-shrink-0">
             <Link href="/">
               <div className="flex items-center gap-2 cursor-pointer group">
-                <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Kali-dragon-icon.svg" 
-                  alt="Dragon Logo" 
-                  className="h-8 w-8 object-contain filter drop-shadow-[0_0_8px_rgba(147,51,234,0.6)] opacity-90 group-hover:opacity-100 group-hover:drop-shadow-[0_0_12px_rgba(147,51,234,0.9)] transition-all duration-300"
-                />
-                <span className="font-display font-bold text-xl tracking-wider text-foreground group-hover:text-primary transition-colors">
+                <div className="relative flex items-center justify-center w-10 h-10">
+                  <Hexagon className="absolute inset-0 w-10 h-10 text-primary opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300 filter drop-shadow-[0_0_8px_rgba(147,51,234,0.6)]" strokeWidth={1.5} />
+                  <Cpu className="absolute w-5 h-5 text-primary group-hover:text-white transition-colors duration-300 z-10" strokeWidth={1.5} />
+                </div>
+                <span className="font-display font-bold text-xl tracking-wider text-foreground group-hover:text-primary transition-colors ml-1">
                   SEC<span className="text-primary">.PORTFOLIO</span>
                 </span>
               </div>
