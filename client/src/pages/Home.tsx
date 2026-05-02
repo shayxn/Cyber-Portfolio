@@ -110,7 +110,7 @@ export function Home() {
                 details: "Supported cybersecurity risk assessments, control reviews, and compliance-related governance activities."
               },
               {
-                role: "Cybersecurity Intern",
+                role: "Technical Internee",
                 company: "InShield Tech",
                 period: "05/2025 - 06/2025",
                 location: "Dubai, UAE",

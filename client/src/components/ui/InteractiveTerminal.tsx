@@ -88,6 +88,7 @@ export function InteractiveTerminal() {
               <ul className="list-disc list-inside text-primary/80">
                 <li>Splunk & Sentinel SIEM</li>
                 <li>Security Onion & Wireshark</li>
+                <li>Digital Forensics & Malware Analysis</li>
                 <li>Active Directory & ISO 27001</li>
               </ul>
             </div>

@@ -19,7 +19,8 @@ export function Skills() {
         { name: "Security Onion", level: 85 },
         { name: "SIEM (Splunk)", level: 80 },
         { name: "Wireshark", level: 90 },
-        { name: "Malware Analysis", level: 75 }
+        { name: "Malware Analysis", level: 75 },
+        { name: "Digital Forensics", level: 80 }
       ]
     },
     {
