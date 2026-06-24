@@ -7,6 +7,7 @@ import expresswayLogo from "@assets/image_1770021462490.png";
 import planningLogo from "@assets/image_1770023250391.png";
 import malwareLogo from "@assets/image_1775729570009.png";
 import aiRiskLogo from "@assets/image_1776076981590.png";
+import insiderLabLogo from "@assets/image_1782317005169.png";
 
 export function Projects() {
   return (
@@ -22,6 +23,13 @@ export function Projects() {
             transition={{ duration: 0.5 }}
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
+            <ProjectCard 
+              title="Insider Lab (CyberDefenders)"
+              description="Analyze Linux disk image artifacts, including logs and Bash history, using FTK Imager to investigate insider threat activities and reconstruct user actions."
+              tags={["Endpoint Forensics", "Execution", "Credential Access"]}
+              image={insiderLabLogo}
+              link="https://cyberdefenders.org/blueteam-ctf-challenges/achievements/shayxn/insider/"
+            />
             <ProjectCard 
               title="HackTheBox: Expressway"
               description="Successfully pwned the Expressway machine. Exploited vulnerabilities to gain system access and capture both user and root flags."
