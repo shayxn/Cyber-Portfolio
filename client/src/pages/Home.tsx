@@ -63,6 +63,14 @@ export function Home() {
                 <a href="mailto:shayanaliwis@gmail.com" className="inline-block px-8 py-3 border-2 border-primary text-primary rounded-lg font-mono font-bold hover:bg-primary/10 transition-colors">
                   INITIATE_CONTACT
                 </a>
+                <a
+                  href="https://tryhackme.com/p/shayxn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-8 py-3 border-2 border-accent text-accent rounded-lg font-mono font-bold hover:bg-accent/10 transition-colors"
+                >
+                  TRYHACKME_PROFILE
+                </a>
               </div>
             </motion.div>
 
