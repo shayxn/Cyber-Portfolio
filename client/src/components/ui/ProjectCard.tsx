@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github, Lock } from "lucide-react";
+import { ArrowUpRight, Github } from "lucide-react";
 
 interface ProjectCardProps {
   title: string;
@@ -14,64 +12,44 @@ interface ProjectCardProps {
 
 export function ProjectCard({ title, description, tags, link, github, image }: ProjectCardProps) {
   return (
-    <motion.div
-      whileHover={{ scale: 1.02 }}
-      className="border border-primary/20 rounded-xl bg-card/60 backdrop-blur-sm h-full flex flex-col overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.4)] hover:border-primary/50 transition-colors"
+    <motion.article
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{ duration: 0.45 }}
+      className="project-card paper-panel lift"
     >
       {image && (
-        <div className="h-48 overflow-hidden border-b border-primary/20 relative group">
-          <img 
-            src={image} 
-            alt={title} 
-            className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-          />
-          <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors" />
+        <div className="project-image">
+          <img src={image} alt="" loading="lazy" />
+          <span className="project-image-label">CASE FILE</span>
         </div>
       )}
-      <Card className="border-0 bg-transparent shadow-none h-full flex flex-col">
-        <CardHeader>
-          <div className="flex justify-between items-start">
-            <CardTitle className="text-xl font-mono text-primary truncate">{title}</CardTitle>
-            <Lock className="w-4 h-4 text-muted-foreground" />
+      <div className="project-card-content">
+        <div className="project-card-topline">
+          <span className="section-kicker">Research / practice</span>
+          <span className="project-number">PROJECT</span>
+        </div>
+        <h3 className="project-title">{title}</h3>
+        <p className="project-description">{description}</p>
+        <div className="project-tags">
+          {tags.map((tag) => <span className="project-tag" key={tag}>{tag}</span>)}
+        </div>
+        {(github || link) && (
+          <div className="project-actions">
+            {github && (
+              <a href={github} target="_blank" rel="noopener noreferrer" className="text-link">
+                <Github size={15} /> Repository <ArrowUpRight size={14} />
+              </a>
+            )}
+            {link && (
+              <a href={link} target="_blank" rel="noopener noreferrer" className="text-link">
+                View case <ArrowUpRight size={14} />
+              </a>
+            )}
           </div>
-        </CardHeader>
-        <CardContent className="flex-grow">
-          <p className="text-muted-foreground text-sm font-sans mb-4 leading-relaxed">
-            {description}
-          </p>
-          <div className="flex flex-wrap gap-2 mt-auto">
-            {tags.map((tag) => (
-              <Badge 
-                key={tag} 
-                variant="outline" 
-                className="border-primary/30 text-primary/80 font-mono text-xs hover:bg-primary/10"
-              >
-                {tag}
-              </Badge>
-            ))}
-          </div>
-        </CardContent>
-        <CardFooter className="flex justify-end gap-4 border-t border-primary/10 pt-4 mt-auto">
-          {github && (
-            <a 
-              href={github} 
-              target="_blank" 
-              className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2 text-sm font-mono"
-            >
-              <Github className="w-4 h-4" /> REPO
-            </a>
-          )}
-          {link && (
-            <a 
-              href={link} 
-              target="_blank" 
-              className="text-muted-foreground hover:text-accent transition-colors flex items-center gap-2 text-sm font-mono"
-            >
-              <ExternalLink className="w-4 h-4" /> LINK
-            </a>
-          )}
-        </CardFooter>
-      </Card>
-    </motion.div>
+        )}
+      </div>
+    </motion.article>
   );
 }

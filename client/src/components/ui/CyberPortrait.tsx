@@ -1,11 +1,14 @@
 export function CyberPortrait({ src }: { src: string }) {
   return (
-    <div className="relative w-full max-w-sm mx-auto aspect-[4/5] overflow-hidden rounded-lg border border-primary/20 bg-background">
-      <img
-        src={src}
-        alt="Portrait"
-        className="w-full h-full object-cover"
-      />
+    <div className="portrait-frame">
+      <div className="portrait-note">United Arab Emirates <span>CYBERSECURITY</span></div>
+      <div className="portrait-image-wrap">
+        <img src={src} alt="Shayan Ali" className="portrait-image" />
+      </div>
+      <div className="portrait-caption">
+        <span className="portrait-index">01 / ABOUT</span>
+        <span>People first. Systems protected.</span>
+      </div>
     </div>
   );
 }

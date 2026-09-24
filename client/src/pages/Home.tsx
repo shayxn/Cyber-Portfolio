@@ -1,239 +1,162 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Section } from "@/components/ui/Section";
-import { GlitchText } from "@/components/ui/GlitchText";
-import { ProjectCard } from "@/components/ui/ProjectCard";
 import { InteractiveTerminal } from "@/components/ui/InteractiveTerminal";
 import { CyberPortrait } from "@/components/ui/CyberPortrait";
-import { motion } from "framer-motion";
-import { Terminal, Award, BookOpen, ChevronRight, ShieldCheck } from "lucide-react";
 import { Link } from "wouter";
-
-import expresswayLogo from "@assets/image_1770021462490.png";
-import planningLogo from "@assets/image_1770023250391.png";
+import { motion } from "framer-motion";
+import { ArrowDown, ArrowRight, ArrowUpRight, Award, BookOpen, MapPin, ShieldCheck } from "lucide-react";
 import profilePic from "@assets/image_1773977700491.png";
+
+const experience = [
+  {
+    role: "AI Cybersecurity Intern", company: "ATS5E", period: "12/2025 – 04/2026", location: "Dubai, UAE",
+    details: "Supported security reviews for AI-enabled systems and agents, with focus on access control, risk identification, secure integrations, and technical security documentation."
+  },
+  {
+    role: "Cybersecurity & Risk Governance Intern", company: "Aspiro", period: "06/2025 – 09/2025", location: "Dubai, UAE",
+    details: "Supported cybersecurity risk assessments, control reviews, and compliance-related governance activities."
+  },
+  {
+    role: "Technical Internee", company: "InShield Tech", period: "05/2025 – 06/2025", location: "Dubai, UAE",
+    details: "Supported Netskope cloud security operations, including policy monitoring, alert review, and security documentation."
+  },
+  {
+    role: "AI Cybersecurity Intern", company: "Raen AI", period: "05/2024 – 08/2024", location: "Dubai, UAE",
+    details: "Performed red teaming of Large Language Model (LLM) applications to uncover security risks, misuse scenarios, and prompt injection vulnerabilities. Used Giskard to automate vulnerability scanning, bias detection, and adversarial testing of AI models, improving the reliability and security of deployed systems."
+  },
+  {
+    role: "IT Intern", company: "Lattafa", period: "05/2023 – 08/2023", location: "Sharjah, UAE",
+    details: "Collaborated with IT teams to support information security policies and controls."
+  }
+];
+
+const certifications = [
+  { name: "ISO/IEC 27001:2022 Lead Auditor", issuer: "Mastermind Assurance", date: "2025", id: "330d0e5f-76c5-4495-ab2d-5224e8bf95b5" },
+  { name: "Certified Ethical Hacker", issuer: "EC-Council", date: "In Progress", id: "CEH" },
+  { name: "Google Cybersecurity", issuer: "Google", date: "2025", id: "LJ647PD19HXS", link: "https://www.coursera.org/account/accomplishments/specialization/LJ647PD19HXS" }
+];
 
 export function Home() {
   return (
-    <div className="min-h-screen bg-background relative overflow-hidden">
-      {/* Scanline Effect */}
-      <div className="scanline"></div>
-
+    <div className="page-shell">
       <Navbar />
-
-      <main className="relative z-10 pt-16">
-        {/* HERO SECTION */}
-        <section className="min-h-[90vh] flex flex-col justify-center relative py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid md:grid-cols-2 gap-12 items-center mb-16">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="inline-block px-3 py-1 mb-4 border border-primary/50 bg-primary/10 text-primary font-mono text-sm rounded-sm">
-                STATUS: ONLINE
+      <main>
+        <section className="home-hero">
+          <div className="site-container hero-grid">
+            <motion.div initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .65 }}>
+              <p className="eyebrow">Cybersecurity, with context</p>
+              <h1 className="display-title hero-title">Curious by nature.<br /><em>Careful by design.</em></h1>
+              <p className="hero-copy">
+                I’m Shayan Ali, a cybersecurity professional working across red teaming, security operations, and responsible AI. I like understanding how things break—and helping people make them safer.
+              </p>
+              <div className="hero-meta">
+                <span><MapPin size={15} /> United Arab Emirates</span>
+                <span>Red teaming · SOC · AI security</span>
               </div>
-              <div id="whoami-card" className="bg-card/80 border border-primary/20 p-6 rounded-lg backdrop-blur-md shadow-[0_0_30px_rgba(34,197,94,0.1)] mb-8">
-                <div className="flex items-center gap-2 mb-4 border-b border-primary/20 pb-2">
-                  <Terminal className="text-primary w-5 h-5" />
-                  <span className="text-sm font-mono text-muted-foreground">terminal@user:~</span>
-                </div>
-                <div className="font-mono text-sm space-y-2">
-                  <p className="text-primary">$ ./whoami</p>
-                  <p className="text-foreground pl-4">
-                    Name: Shayan Ali<br/>
-                    Role: Cybersecurity Analyst<br/>
-                    Location: United Arab Emirates<br/>
-                    Focus: Red Teaming, SOC Operations
-                  </p>
-                  <p className="text-primary mt-4">$ ./list_skills</p>
-                  <div className="pl-4 grid grid-cols-2 gap-x-4 text-foreground/80">
-                    <span>- Python</span>
-                    <span>- Linux</span>
-                    <span>- Wireshark</span>
-                    <span>- Metasploit</span>
-                  </div>
-                  <p className="text-primary mt-4 animate-pulse">$ _</p>
-                </div>
+              <div className="hero-actions">
+                <Link href="/projects" className="button-primary">Explore my work <ArrowRight size={16} /></Link>
+                <a href="mailto:shayanaliwis@gmail.com" className="button-outline">Get in touch <ArrowUpRight size={16} /></a>
               </div>
-              
-              <div className="flex flex-wrap gap-4">
-                <Link href="/projects" className="cursor-pointer inline-block px-8 py-3 bg-primary text-primary-foreground rounded-lg font-mono font-bold hover:bg-primary/90 transition-colors shadow-[0_0_15px_rgba(147,51,234,0.3)] hover:shadow-[0_0_25px_rgba(147,51,234,0.5)]">
-                  VIEW_OPERATIONS
-                </Link>
-                <a href="mailto:shayanaliwis@gmail.com" className="inline-block px-8 py-3 border-2 border-primary text-primary rounded-lg font-mono font-bold hover:bg-primary/10 transition-colors">
-                  INITIATE_CONTACT
-                </a>
-                <a
-                  href="https://tryhackme.com/p/shayxn"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block px-8 py-3 border-2 border-accent text-accent rounded-lg font-mono font-bold hover:bg-accent/10 transition-colors"
-                >
-                  TRYHACKME_PROFILE
-                </a>
+              <div className="hero-secondary-links">
+                <a href="https://tryhackme.com/p/shayxn" target="_blank" rel="noopener noreferrer">TryHackMe profile <ArrowUpRight size={13} /></a>
+                <a href="https://github.com/shayxn" target="_blank" rel="noopener noreferrer">GitHub <ArrowUpRight size={13} /></a>
               </div>
             </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              className="flex justify-center w-full max-w-sm mx-auto md:max-w-none mt-8 md:mt-0"
-            >
+            <motion.div className="hero-portrait" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: .15, duration: .65 }}>
               <CyberPortrait src={profilePic} />
+              <div className="hero-margin-note">SECURITY<br />IS A HUMAN<br />PRACTICE.</div>
             </motion.div>
           </div>
-          
-          {/* Interactive Terminal Section */}
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.6 }}
-            >
-              <div className="flex items-center gap-2 mb-2 text-primary font-mono text-sm">
-                <span className="animate-pulse">▶</span>
-                <span>INTERACTIVE_SYSTEM_ACCESS // TYPE 'help' FOR INSTRUCTIONS</span>
-              </div>
-              <InteractiveTerminal />
-            </motion.div>
+          <a className="scroll-cue site-container" href="#about"><span>Scroll to explore</span><ArrowDown size={15} /></a>
+          <div className="hero-stamp" aria-hidden="true">SA<br /><span>2026</span></div>
+        </section>
+
+        <Section id="about" title="A little about how I work">
+          <div className="about-grid">
+            <p className="about-lead">Good security isn’t just a stack of tools. It’s careful thinking, clear communication, and knowing what matters to the people who rely on a system.</p>
+            <div className="about-aside">
+              <p>My experience spans offensive testing, SOC workflows, governance, and the fast-changing risks around AI. My academic background is in cybersecurity at Rochester Institute of Technology, with a focus on network defense, cryptography, and digital forensics.</p>
+              <Link href="/skills" className="text-link">See the skills I bring <ArrowRight size={15} /></Link>
+            </div>
+          </div>
+          <div className="values-strip">
+            <div><span>01</span><strong>Stay curious</strong><p>Ask a better question before reaching for a tool.</p></div>
+            <div><span>02</span><strong>Think in context</strong><p>Translate technical findings into real-world risk.</p></div>
+            <div><span>03</span><strong>Share the signal</strong><p>Make security work clear, useful, and collaborative.</p></div>
+          </div>
+        </Section>
+
+        <section className="terminal-section">
+          <div className="site-container terminal-section-grid">
+            <div className="terminal-intro">
+              <p className="section-kicker">A small interactive detour</p>
+              <h2 className="section-heading">Ask the<br />terminal.</h2>
+              <p>Try <code>help</code>, <code>whoami</code>, or <code>projects</code>. It’s a little command-line window into the work and the person behind it.</p>
+              <span className="terminal-caret-label"><i /> SYSTEM READY</span>
+            </div>
+            <InteractiveTerminal />
           </div>
         </section>
 
-        <Section id="experience" title="WORK_EXPERIENCE" className="bg-secondary/10">
-          <div className="relative border-l border-primary/30 ml-4 md:ml-12 space-y-12">
-            {[
-              {
-                role: "AI Cybersecurity Intern",
-                company: "ATS5E",
-                period: "12/2025 - 04/2026",
-                location: "Dubai, UAE",
-                details: "Supported security reviews for AI-enabled systems and agents, with focus on access control, risk identification, secure integrations, and technical security documentation."
-              },
-              {
-                role: "Cybersecurity & Risk Governance Intern",
-                company: "Aspiro",
-                period: "06/2025 - 09/2025",
-                location: "Dubai, UAE",
-                details: "Supported cybersecurity risk assessments, control reviews, and compliance-related governance activities."
-              },
-              {
-                role: "Technical Internee",
-                company: "InShield Tech",
-                period: "05/2025 - 06/2025",
-                location: "Dubai, UAE",
-                details: "Supported Netskope cloud security operations, including policy monitoring, alert review, and security documentation."
-              },
-              {
-                role: "AI Cybersecurity Intern",
-                company: "Raen AI",
-                period: "05/2024 - 08/2024",
-                location: "Dubai, UAE",
-                details: "Performed red teaming of Large Language Model (LLM) applications to uncover security risks, misuse scenarios, and prompt injection vulnerabilities. Used Giskard to automate vulnerability scanning, bias detection, and adversarial testing of AI models, improving the reliability and security of deployed systems."
-              },
-              {
-                role: "IT Intern",
-                company: "Lattafa",
-                period: "05/2023 - 08/2023",
-                location: "Sharjah, UAE",
-                details: "Collaborated with IT teams to support information security policies and controls."
-              }
-            ].map((exp, idx) => (
-              <div key={idx} className="relative pl-8 md:pl-12">
-                <div className="absolute -left-[5px] top-2 w-2.5 h-2.5 bg-primary rounded-full shadow-[0_0_10px_theme('colors.primary')]"></div>
-                <div className="bg-card/50 p-6 border border-primary/10 hover:border-primary/40 transition-colors rounded-r-lg">
-                  <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                    <h3 className="text-xl font-display font-bold text-foreground">{exp.role}</h3>
-                    <span className="font-mono text-sm text-primary bg-primary/10 px-3 py-1 rounded-full w-fit mt-2 md:mt-0">{exp.period}</span>
-                  </div>
-                  <h4 className="text-lg text-muted-foreground font-mono mb-4 flex items-center justify-between">
-                    <span className="flex items-center gap-2"><Terminal className="w-4 h-4" /> {exp.company}</span>
-                    <span className="text-sm">{exp.location}</span>
-                  </h4>
-                  <p className="text-foreground/80 font-sans leading-relaxed">
-                    {exp.details}
-                  </p>
+        <Section id="experience" title="Experience, in practice">
+          <div className="experience-list">
+            {experience.map((job, index) => (
+              <motion.article key={`${job.company}-${job.role}`} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: .2 }} transition={{ delay: index * .06 }} className="experience-row">
+                <div className="experience-rail"><span>{String(index + 1).padStart(2, "0")}</span><i /></div>
+                <div className="experience-main">
+                  <div className="experience-topline"><span className="section-kicker">{job.company}</span><span className="experience-period">{job.period}</span></div>
+                  <h3>{job.role}</h3>
+                  <p>{job.details}</p>
+                  <span className="experience-location"><MapPin size={13} /> {job.location}</span>
                 </div>
-              </div>
+              </motion.article>
             ))}
           </div>
         </Section>
 
-        {/* EDUCATION */}
-        <Section id="education" title="EDUCATION_LOG" className="bg-secondary/5">
-          <div className="relative border-l border-primary/30 ml-4 md:ml-12 space-y-12">
-            {[
-              {
-                degree: "B.S. Cybersecurity",
-                school: "Rochester Institute of Technology",
-                period: "2022 - 2026",
-                details: "Focus on Network Defense, Cryptography, and Digital Forensics."
-              }
-            ].map((edu, idx) => (
-              <div key={idx} className="relative pl-8 md:pl-12">
-                <div className="absolute -left-[5px] top-2 w-2.5 h-2.5 bg-primary rounded-full shadow-[0_0_10px_theme('colors.primary')]"></div>
-                <div className="bg-card/50 p-6 border border-primary/10 hover:border-primary/40 transition-colors rounded-r-lg">
-                  <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                    <h3 className="text-xl font-display font-bold text-foreground">{edu.degree}</h3>
-                    <span className="font-mono text-sm text-primary bg-primary/10 px-3 py-1 rounded-full w-fit mt-2 md:mt-0">{edu.period}</span>
-                  </div>
-                  <h4 className="text-lg text-muted-foreground font-mono mb-4 flex items-center gap-2">
-                    <BookOpen className="w-4 h-4" /> {edu.school}
-                  </h4>
-                  <p className="text-foreground/80 font-sans leading-relaxed">
-                    {edu.details}
-                  </p>
-                </div>
-              </div>
-            ))}
+        <Section id="education" title="Building the foundation" className="education-section">
+          <div className="education-card paper-panel">
+            <div className="education-icon"><BookOpen size={22} /></div>
+            <div className="education-copy">
+              <span className="section-kicker">2022 — 2026</span>
+              <h3>B.S. Cybersecurity</h3>
+              <p className="education-school">Rochester Institute of Technology</p>
+              <p>Focus on Network Defense, Cryptography, and Digital Forensics.</p>
+            </div>
+            <span className="education-note">01 / EDUCATION</span>
           </div>
         </Section>
 
-        {/* CERTIFICATIONS */}
-        <Section title="CERTIFICATIONS" className="bg-secondary/20">
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { name: "ISO/IEC 27001:2022 Lead Auditor", issuer: "Mastermind Assurance", date: "2025", id: "330d0e5f-76c5-4495-ab2d-5224e8bf95b5" },
-              { name: "Certified Ethical Hacker", issuer: "EC-Council", date: "In Progress", id: "CEH" },
-              { 
-                name: "Google Cybersecurity", 
-                issuer: "Google", 
-                date: "2025", 
-                id: "LJ647PD19HXS",
-                link: "https://www.coursera.org/account/accomplishments/specialization/LJ647PD19HXS"
-              }
-            ].map((cert, idx) => (
-              <motion.div 
-                key={idx}
-                whileHover={{ y: -5 }}
-                className="bg-card border-l-4 border-primary p-6 relative overflow-hidden group cursor-pointer"
-                onClick={() => cert.link && window.open(cert.link, '_blank')}
-              >
-                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                  <ShieldCheck className="w-24 h-24" />
-                </div>
-                <div className="flex justify-between items-start mb-4">
-                  <Award className="w-8 h-8 text-primary" />
-                  <span className="font-mono text-xs text-muted-foreground border border-primary/20 px-2 py-1">{cert.date}</span>
-                </div>
-                <h3 className="text-xl font-bold font-display text-foreground mb-1">{cert.name}</h3>
-                <p className="text-sm text-muted-foreground font-mono">{cert.issuer}</p>
-                <div className="mt-4 pt-4 border-t border-dashed border-primary/20">
-                  <span className="text-xs font-mono text-primary">ID: {cert.id}-{Math.floor(Math.random() * 9999)}</span>
-                </div>
-              </motion.div>
-            ))}
+        <Section title="Credentials & continued learning">
+          <div className="credential-grid">
+            {certifications.map((cert) => {
+              const content = (
+                <>
+                  <div className="credential-mark"><Award size={20} /><span>{cert.date}</span></div>
+                  <h3>{cert.name}</h3>
+                  <p>{cert.issuer}</p>
+                  <div className="credential-id"><ShieldCheck size={14} /> Credential ID <span>{cert.id}</span></div>
+                  {cert.link && <span className="credential-verify">View credential <ArrowUpRight size={14} /></span>}
+                </>
+              );
+              return cert.link ? (
+                <a className="credential-card paper-panel lift" href={cert.link} target="_blank" rel="noopener noreferrer" key={cert.id}>{content}</a>
+              ) : (
+                <article className="credential-card paper-panel lift" key={cert.id}>{content}</article>
+              );
+            })}
           </div>
         </Section>
 
-        <footer className="border-t border-primary/20 bg-background py-12">
-          <div className="max-w-7xl mx-auto px-4 text-center">
-            <p className="font-mono text-sm text-muted-foreground">
-              &copy; 2025 CYBERSEC_PORTFOLIO. SYSTEM_SECURE.
-            </p>
+        <section className="closing-note">
+          <div className="site-container closing-inner">
+            <p className="section-kicker">The best security work is shared</p>
+            <h2>Have a thoughtful problem<br />to solve?</h2>
+            <a href="mailto:shayanaliwis@gmail.com" className="button-light">Let’s talk <ArrowUpRight size={16} /></a>
           </div>
-        </footer>
+        </section>
       </main>
+      <footer className="site-footer"><div className="site-container footer-inner"><span>© 2026 Shayan Ali</span><span>Security is a practice, not a finish line.</span><a href="mailto:syedshayan03@protonmail.com">Email Shayan <ArrowUpRight size={13} /></a></div></footer>
     </div>
   );
 }

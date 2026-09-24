@@ -8,6 +8,9 @@ interface CommandHistory {
 
 export function InteractiveTerminal() {
   const [input, setInput] = useState("");
+  const [isMinimized, setIsMinimized] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isClosed, setIsClosed] = useState(false);
   const [history, setHistory] = useState<CommandHistory[]>([
     { type: 'output', content: "Welcome to the interactive terminal v1.0.0" },
     { type: 'output', content: "Type 'help' to view a list of available commands." }
@@ -164,58 +167,76 @@ export function InteractiveTerminal() {
     }
   };
 
+  if (isClosed) {
+    return (
+      <div className="terminal-restore">
+        <span className="terminal-restore-dot" />
+        <span>Terminal session paused</span>
+        <button type="button" onClick={() => setIsClosed(false)}>Reopen terminal</button>
+      </div>
+    );
+  }
+
   return (
-    <div className="w-full max-w-4xl mx-auto my-12 font-mono text-sm shadow-[0_4px_30px_rgba(110,44,243,0.2)] rounded-xl overflow-hidden border border-primary/30 bg-card/80 backdrop-blur-md">
+    <div className={`terminal-window ${isExpanded ? "terminal-expanded" : ""} ${isMinimized ? "terminal-minimized" : ""}`}>
       {/* Terminal Title Bar */}
-      <div className="bg-muted/50 px-4 py-2 flex items-center justify-between border-b border-primary/10 select-none">
+      <div className="terminal-titlebar">
         <div className="flex items-center gap-2 text-muted-foreground">
           <TerminalIcon className="w-4 h-4" />
-          <span>guest@portfolio: ~</span>
+          <span>shayan@portfolio: ~</span>
         </div>
-        <div className="flex gap-2">
-          <Minimize2 className="w-4 h-4 text-muted-foreground hover:text-foreground cursor-pointer" />
-          <Maximize2 className="w-4 h-4 text-muted-foreground hover:text-foreground cursor-pointer" />
-          <X className="w-4 h-4 text-muted-foreground hover:text-destructive cursor-pointer" />
+        <div className="terminal-controls">
+          <button type="button" aria-label={isMinimized ? "Restore terminal" : "Minimize terminal"} onClick={() => setIsMinimized(!isMinimized)}>
+            <Minimize2 size={14} />
+          </button>
+          <button type="button" aria-label={isExpanded ? "Restore terminal size" : "Expand terminal"} onClick={() => setIsExpanded(!isExpanded)}>
+            <Maximize2 size={14} />
+          </button>
+          <button type="button" aria-label="Close terminal" onClick={() => setIsClosed(true)}>
+            <X size={14} />
+          </button>
         </div>
       </div>
 
       {/* Terminal Content */}
-      <div 
-        className="p-4 h-[400px] overflow-y-auto custom-scrollbar cursor-text terminal-container"
-        onClick={focusInput}
-      >
-        <div className="space-y-2 text-foreground/90">
-          {history.map((entry, i) => (
-            <div key={i} className="break-words">
-              {entry.type === 'input' ? (
-                <div className="flex items-center gap-2 text-primary">
-                  <span className="select-none font-bold">[guest@portfolio ~]$</span>
-                  <span>{entry.content}</span>
-                </div>
-              ) : (
-                <div className="pl-0">{entry.content}</div>
-              )}
+      {!isMinimized && (
+        <div
+          className="terminal-content terminal-container"
+          onClick={focusInput}
+        >
+          <div className="terminal-output">
+            {history.map((entry, i) => (
+              <div key={i} className="break-words">
+                {entry.type === 'input' ? (
+                  <div className="flex items-center gap-2 text-primary">
+                    <span className="select-none font-bold">[guest@portfolio ~]$</span>
+                    <span>{entry.content}</span>
+                  </div>
+                ) : (
+                  <div className="pl-0">{entry.content}</div>
+                )}
+              </div>
+            ))}
+
+            <div className="flex items-center gap-2 text-primary">
+              <span className="select-none font-bold">[guest@portfolio ~]$</span>
+              <input
+                ref={inputRef}
+                type="text"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                onKeyDown={handleKeyDown}
+                className="bg-transparent border-none outline-none flex-1 text-foreground focus:ring-0 p-0"
+                autoFocus
+                spellCheck={false}
+                autoComplete="off"
+              />
+              <span className="animate-pulse w-2 h-4 bg-primary block -ml-2"></span>
             </div>
-          ))}
-          
-          <div className="flex items-center gap-2 text-primary">
-            <span className="select-none font-bold">[guest@portfolio ~]$</span>
-            <input
-              ref={inputRef}
-              type="text"
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyDown={handleKeyDown}
-              className="bg-transparent border-none outline-none flex-1 text-foreground focus:ring-0 p-0"
-              autoFocus
-              spellCheck={false}
-              autoComplete="off"
-            />
-            <span className="animate-pulse w-2 h-4 bg-primary block -ml-2"></span>
+            <div ref={bottomRef} />
           </div>
-          <div ref={bottomRef} />
         </div>
-      </div>
+      )}
     </div>
   );
 }
