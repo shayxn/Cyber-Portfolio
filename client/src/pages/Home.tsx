@@ -45,7 +45,7 @@ export function Home() {
           <div className="site-container hero-grid">
             <motion.div initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .65 }}>
               <p className="eyebrow">Cybersecurity, with context</p>
-              <h1 className="display-title hero-title">Curious by nature.<br /><em>Careful by design.</em></h1>
+              <h1 className="display-title hero-title">Security work,<br /><em>grounded in evidence.</em></h1>
               <p className="hero-copy">
                 I’m Shayan Ali, a cybersecurity professional working across red teaming, security operations, and responsible AI. I like understanding how things break—and helping people make them safer.
               </p>
