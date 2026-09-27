@@ -180,9 +180,25 @@
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
 .button-outline { display: inline-flex; justify-content: center; align-items: center; gap: 9px; padding: 12px 18px; border: 1px solid #a8b7ae; color: var(--ink); text-decoration: none; font: 600 .76rem var(--font-code); transition: border .2s ease, background .2s ease, transform .2s ease; }
 .button-outline:hover { border-color: var(--orange); background: rgba(214,106,67,.07); transform: translateY(-2px); }
-.hero-secondary-links { display: flex; gap: 21px; margin-top: 25px; color: #66726c; }
-.hero-secondary-links a { display: inline-flex; align-items: center; gap: 4px; font: 500 .7rem var(--font-code); text-decoration: none; }
-.hero-secondary-links a:hover { color: var(--orange); }
+.hero-secondary-links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 22px; }
+.hero-secondary-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 12px;
+  border: 1px solid rgba(37,107,98,.35);
+  background: rgba(37,107,98,.06);
+  color: var(--teal);
+  font: 600 .78rem var(--font-code);
+  text-decoration: none;
+  transition: color .2s ease, background .2s ease, border-color .2s ease, transform .2s ease;
+}
+.hero-secondary-links a:hover {
+  border-color: var(--teal);
+  background: var(--teal);
+  color: var(--paper-light);
+  transform: translateY(-2px);
+}
 .hero-portrait { position: relative; max-width: 410px; justify-self: end; width: 100%; margin-right: 28px; }
 .portrait-frame { position: relative; z-index: 1; padding: 14px 14px 0; background: var(--paper-light); border: 1px solid #d4cdbc; box-shadow: 0 24px 65px rgba(38,47,41,.14); }
 .portrait-note { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 0 1px 12px; color: #66726c; font: 500 .57rem var(--font-code); letter-spacing: .02em; text-transform: uppercase; }
