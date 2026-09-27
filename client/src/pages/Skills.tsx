@@ -52,7 +52,7 @@ export function Skills() {
               <p className="eyebrow">A practical toolkit</p>
               <h1 className="display-title page-title">Tools are useful.<br /><em>Judgment is better.</em></h1>
             </div>
-            <p className="page-intro-copy">A working mix of offensive testing, detection, and risk governance—built through hands-on labs, internships, and a lot of questions.</p>
+            <p className="page-intro-copy">A working mix of offensive testing, detection, and risk governance, built through hands-on labs, internships, and a lot of questions.</p>
           </div>
           <div className="page-index">02 <span>/</span> SKILLS</div>
         </section>

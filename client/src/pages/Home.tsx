@@ -47,7 +47,7 @@ export function Home() {
               <p className="eyebrow">Cybersecurity, with context</p>
               <h1 className="display-title hero-title">Security work,<br /><em>grounded in evidence.</em></h1>
               <p className="hero-copy">
-                I’m Shayan Ali, a cybersecurity professional working across red teaming, security operations, and responsible AI. I like understanding how things break—and helping people make them safer.
+                I’m Shayan Ali, a cybersecurity professional working across red teaming, security operations, and responsible AI. I like understanding how things break, then helping people make them safer.
               </p>
               <div className="hero-meta">
                 <span><MapPin size={15} /> United Arab Emirates</span>
@@ -118,7 +118,7 @@ export function Home() {
           <div className="education-card paper-panel">
             <div className="education-icon"><BookOpen size={22} /></div>
             <div className="education-copy">
-              <span className="section-kicker">2022 — 2026</span>
+              <span className="section-kicker">2022 to 2026</span>
               <h3>B.S. Cybersecurity</h3>
               <p className="education-school">Rochester Institute of Technology</p>
               <p>Focus on Network Defense, Cryptography, and Digital Forensics.</p>
