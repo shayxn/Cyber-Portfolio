@@ -5,7 +5,7 @@ import { CyberPortrait } from "@/components/ui/CyberPortrait";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { ArrowDown, ArrowRight, ArrowUpRight, Award, BookOpen, MapPin, ShieldCheck } from "lucide-react";
-import profilePic from "@assets/image_1773977700491.png";
+import profilePic from "@assets/29f0b778-31a2-4b86-9cc9-c4a47f1f9642_1791376306496.jpeg";
 
 const experience = [
   {
